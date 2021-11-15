@@ -1,1 +1,64 @@
 {% extends 'layouts/base.html' %}
+{% load static %}
+{% block styles %}
+    {{ block.super }}
+    <link href="http://fonts.cdnfonts.com/css/circe" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %}
+{% block content %}
+    <div class="content">
+        <section class="section--header">
+            <h1 class="section--header__title">Доставка посылок при помощи дронов</h1>
+            <!-- 180px -->
+            <div class="section--header__text">
+                <p>
+                    Попробуйте инновационную доставку.
+                    Выберите удобное время,
+                    и наш дрон привезет посылку на Ваш адрес в течение часа
+                </p>
+                <button class="section--header__button">Оформить заявку</button>
+            </div>
+        </section>
+        <section class="section--content">
+            <div class="section--content__left">
+                <div class="left__title"><h2>Почему Lintu</h2></div>
+                <div class="left__description">
+                    <p>Для доставки грузов Lintu использует исключительно дроны.</p><br>
+                    <p>Вся логистическая схема нашей компании основана на отсутствии человеческого фактора. </p><br>
+                    <p>
+                        Наши «курьеры» никогда не устают и не сбиваются с пути, поэтому мы доставляем грузы без пробок и
+                        перебоев.
+                    </p><br>
+                </div>
+                <div class="left__video">
+                    <img src="{% static 'images/video_thumbnail.png' %}" alt="">
+                    <p>Посмотрите на полет нового дрона-доставщика от Lintu</p>
+                </div>
+            </div>
+            <div class="section--content__drone">
+                <img src="{% static 'images/drone.png' %}" alt="">
+            </div>
+            <div class="section--content__right">
+                <div class="right__advantages">
+                    <div class="right__advantages--item">
+                        <img src="{% static 'svg/speed.svg' %}" alt="">
+                        <p class="right__advantages--text">Среднее время доставки 20-30 минут</p>
+                    </div>
+                    <div class="right__advantages--item">
+                        <img src="{% static 'svg/drone.svg' %}" alt="">
+                        <p class="right__advantages--text">Доставляем любой груз до 10 кг</p>
+                    </div>
+                    <div class="right__advantages--item">
+                        <img src="{% static 'svg/wallet.svg' %}" alt="">
+                        <p class="right__advantages--text">Возврат средств при утрате или повреждении груза</p>
+                    </div>
+                    <div class="right__advantages--item">
+                        <img src="{% static 'svg/app.svg' %}" alt="">
+                        <p class="right__advantages--text">Отслеживание доставки через приложение</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section--services"></section>
+    </div>
+{% endblock %}

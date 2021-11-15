@@ -1,0 +1,28 @@
+{
+  "extends": [
+    "stylelint-config-standard"
+  ],
+  "rules": {
+    "selector-class-pattern": ".[a-z]+([_]+[a-z]+([_]+[a-z]+)?)?",
+    "color-function-notation": "legacy",
+    "alpha-value-notation": "number",
+    "string-quotes": "double",
+    "selector-list-comma-newline-after": "always-multi-line",
+    "comment-empty-line-before": null,
+    "color-hex-case": null,
+    "no-descending-specificity": null
+  },
+  "overrides": [
+    {
+      "files": [
+        "../*.html",
+        "*.html",
+        "**/*.html"
+      ],
+      "customSyntax": "postcss-html"
+    }
+  ],
+  "ignoreFiles": [
+    "../*.html"
+  ]
+}
